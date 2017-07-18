@@ -24,36 +24,29 @@ function Store(location, minCustomers, maxCustomers, avgCookiesPerSale){
     }
   };
   this.totalCookiesPerDay = 0;
-  // this.render = function(){
-  //   var alkilist = document.getElementById('alki');
-  //   this.calcCookiesSoldEachHour();
-  //   for(var i = 0; i < times.length; i++){
-  //     var liEl = document.createElement('li');
-  //     liEl.textContent = times[i] + ': ' + this.cookiesSoldEachHour[i];
-  //     alkilist.appendChild(liEl)
-  //   }
-  //   liEl = document.createElement('li');
-  //   liEl.textContent = 'Total: ' + this.totalCookiesPerDay + ' cookies';
-  //   alkilist.appendChild(liEl);
-  //   }
-    // this.render = function(){
-    // var trEl = document.createElement('tr');
-    //
-    // var tdEl = document.createElement('td');
-    // tdEl.textContent = this.name;
-    // trEl.appendChild(tdEl);
-    //
-    // tdEl = document.createElement('td');
-    // tdEl.textContent = this.location;
-    // trEl.appendChild(tdEl);
-    //
-    // tdEl = document.createElement('td');
-    // tdEl.textContent = this.tail;
-    // trEl.appendChild(tdEl);
-    //
-    // catTable.appendChild(trEl);
+  myStores.push(this);
+
+    this.render = function(){
+    var trEl = document.createElement('tr');
+
+    var tdEl = document.createElement('td');
+    tdEl.textContent = this.location;
+    trEl.appendChild(tdEl);
+
+    for(var i = 0; i < times.length; i++){
+      var tdEl = document.createElement('td');
+      tdEl.textContent = this.cookiesSoldEachHour[i];
+      trEl.appendChild(tdEl);
+    }
+
+    var tdEl = document.createElement('td');
+    tdEl.textContent = this.totalCookiesPerDay;
+    trEl.appendChild(tdEl);
+
+    salesTable.appendChild(trEl);
+    }
     // this.render(myStores);
-    myStores.push(this);
+    this.calcCookiesSoldEachHour();
   };
 
 var myStores = [];
@@ -86,6 +79,18 @@ function makeHeaderRow(){
     thEl.textContent = times[i];
     trEl.appendChild(thEl);
   };
+
+  var thEl = document.createElement('th');
+  thEl.textContent = 'Daily Location Totals';
+  trEl.appendChild(thEl);
+
   salesTable.appendChild(trEl);
 }
+
+function allCookies(){
+  for(var i = 0; i < myStores.length; i++){
+    myStores[i].render();
+  }
+}
 makeHeaderRow();
+allCookies();
