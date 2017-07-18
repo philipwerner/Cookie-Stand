@@ -217,4 +217,4 @@ function Store(location, minCustomers, maxCustomers, avgCookiesPerSale){
 }
 var myStores = [];
 
-new Store('1st and Pike', 23, 65, 6.3 )
+new Store('1st and Pike', 23, 65, 6.3);
