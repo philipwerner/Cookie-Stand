@@ -25,7 +25,7 @@ var alki = {
   },
   randCookies: function() {
     for(var c = 0; c < times.length; c++){
-      this.cookiePerHour.push(this.custEachHour[c] * this.avgCookie);
+      this.cookiePerHour.push(this.custEachHour * this.avgCookie);
     }
   },
   sales: function() {
@@ -36,10 +36,11 @@ var alki = {
         alkiUl.appendChild(liEl)
       }
     }
-};
+  };
 
 alki.sales();
 console.log(alki.custPerHour())
 console.log(alki.randCust())
+console.log(alki.randCookies())
 // console.log(pike.hourlyCust());
 // pike.render();
