@@ -3,62 +3,8 @@
 // Random customer function
 var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var stores = ['1st and Pike', 'SeaTac', 'Seattle Center', 'Capital Hill', 'Alki'];
+
 // 1st and Pike
-var pike = {
-  name: '1st and Pike',
-  minCust: 23,
-  maxCust: 65,
-  avgCookie: 6.3,
-  totalSales: 0,
-  custEachHour: [],
-  totalCookie: 0,
-  custPerHour:
-    function(maxCust, minCust) {
-        return Math.floor(Math.random() * (this.maxCust - this.minCust) + 1) + this.minCust
-    }
-};
-
-var seaTac = {
-  name: 'SeaTac',
-  minCust: 3,
-  maxCust: 24,
-  avgCookie: 1.2,
-  totalSales: 0,
-  custEachHour: [],
-  totalCookie: 0,
-  custPerHour:
-    function(maxCust, minCust) {
-        return Math.floor(Math.random() * (this.maxCust - this.minCust) + 1) + this.minCust
-    }
-};
-
-var seaCenter = {
-  name: 'Seattle Center',
-  minCust: 11,
-  maxCust: 38,
-  avgCookie: 3.7,
-  totalSales: 0,
-  custEachHour: [],
-  totalCookie: 0,
-  custPerHour:
-    function(maxCust, minCust) {
-        return Math.floor(Math.random() * (this.maxCust - this.minCust) + 1) + this.minCust
-    }
-};
-
-var capHill = {
-  name: 'Capital Hill',
-  minCust: 20,
-  maxCust: 38,
-  avgCookie: 2.3,
-  totalSales: 0,
-  custEachHour: [],
-  totalCookie: 0,
-  custPerHour:
-    function(maxCust, minCust) {
-        return Math.floor(Math.random() * (this.maxCust - this.minCust) + 1) + this.minCust
-    }
-};
 
 var alki = {
   name: 'Alki',
@@ -68,39 +14,34 @@ var alki = {
   totalSales: 0,
   custEachHour: [],
   totalCookie: 0,
-  custPerHour:
-    function(maxCust, minCust) {
-        return Math.floor(Math.random() * (this.maxCust - this.minCust) + 1) + this.minCust
+  cookiePerHour: [],
+  custPerHour: function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + 1) + this.minCust
+  },
+  randCust: function() {
+    for(var p = 0; p < times.length; p++ ){
+      this.custEachHour.push(this.custPerHour(this.maxCust, this.minCust))
+    }
+  },
+  randCookies: function() {
+    for(var c = 0; c < times.length; c++){
+      this.cookiePerHour.push(this.custEachHour * this.avgCookie)
+    }
+  },
+  sales: function() {
+    var alkiUl = document.getElementById('alki');
+      for(var s = 0; s < times.length; s++){
+        var liEl = document.createElement('li');
+        liEl.textContent = times[s] + ': ' + this.randCookies[s];
+      }
     }
 };
 
-  // function custPerHour() {
-  //   for (var i = 0; i < this.custEachHour.length; i++) {
-  //     this.custEachHour[i] = randomCust(this.minCust, this.maxCust);
-  //   }
-  // },
-  // function cookiesSold(){
-  //   for (var i = 0; i < this.cookiesEachHour.length; i++);
-  //   this.cookiesEachHour[i] = this.custEachHour[i] * this.avgCookie;
-  // },
-  // render: function(){
-  //   var pikeUL = document.getElementById('pike');
-  //   for (i = 0; i < this.cookiesEachHour.length; i++){
-  //   var liEL = document.createElement('li');
-  //   liEL.textContent = times[i] + ': ' + this.cookiesEachHour[i];
-  //   pikeUL.appendChild(liEL)
-  //   }
-  // }
-console.log(pike.custEachHour)
-console.log(pike.custPerHour())
-console.log(pike.hourlyCust());
-// pike.render();
+for (var i = 0; i < times.length; i++){
 
-// hourlyCust:
-//   function() {
-//     for(var i = 0; i < times.length; i++){
-//       this.custEachHour.push(this.custPerHour())
-//       this.totalSales += this.custEachHour[i]
-//     }
-//     return
-//   }
+}
+alki.sales();
+console.log(alki.custPerHour())
+console.log(alki.randCust())
+// console.log(pike.hourlyCust());
+// pike.render();
