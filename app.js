@@ -25,7 +25,7 @@ var alki = {
   },
   randCookies: function() {
     for(var c = 0; c < times.length; c++){
-      this.cookiePerHour.push(this.custEachHour * this.avgCookie);
+      this.cookiePerHour.push(this.avgCookie);
     }
   },
   sales: function() {
