@@ -16,16 +16,16 @@ var alki = {
   totalCookie: 0,
   cookiePerHour: [],
   custPerHour: function() {
-    return Math.floor(Math.random() * (this.maxCust - this.minCust) + 1) + this.minCust
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + 1) + this.minCust;
   },
   randCust: function() {
     for(var p = 0; p < times.length; p++ ){
-      this.custEachHour.push(this.custPerHour(this.maxCust, this.minCust))
+      this.custEachHour.push(this.custPerHour());
     }
   },
   randCookies: function() {
     for(var c = 0; c < times.length; c++){
-      this.cookiePerHour.push(this.custEachHour * this.avgCookie)
+      this.cookiePerHour.push(this.custEachHour[c] * this.avgCookie);
     }
   },
   sales: function() {
@@ -33,13 +33,11 @@ var alki = {
       for(var s = 0; s < times.length; s++){
         var liEl = document.createElement('li');
         liEl.textContent = times[s] + ': ' + this.randCookies[s];
+        alkiUl.appendChild(liEl)
       }
     }
 };
 
-for (var i = 0; i < times.length; i++){
-
-}
 alki.sales();
 console.log(alki.custPerHour())
 console.log(alki.randCust())
