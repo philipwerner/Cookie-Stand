@@ -16,3 +16,28 @@ th {
 	background-color: navy;
 	color: white;
 }
+nav {
+    float: left;
+    position: static;
+    font-weight: bolder;
+    font-size: 20px;
+
+}
+nav ul {
+    padding: ;
+    float: left;
+    border-bottom: ;
+    list-style-type: none;
+    width: 800px;
+    margin: auto;
+
+}
+nav li {
+    float: left;
+}
+nav li a {
+    display: block;
+    height: 25px;
+    padding: 12px 18px 8px 18px;
+    border: 2px inset yellow;
+}
