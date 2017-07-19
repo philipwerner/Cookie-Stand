@@ -1,9 +1,11 @@
 'use strict'
-
+// GLOBAL VARIABLES
 var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var salesTable = document.getElementById('cookieShops');
 var myStores = [];
+var clearSalesForm = document.getElementById('clearForm');
 
+// CONSTRUCTOR
 function Store(location, minCustomers, maxCustomers, avgCookiesPerSale){
   this.location = location;
   this.minCustomers = minCustomers;
@@ -55,6 +57,7 @@ new Store('Seattle Center', 11, 38, 2.3);
 new Store('Capitol Hill', 20, 38, 2.3);
 new Store('Alki', 2, 16, 4.6);
 
+// FUNCTION DECLARATIONS
 
 function makeHeaderRow(){
   var trEl = document.createElement('tr');
@@ -64,12 +67,32 @@ function makeHeaderRow(){
   trEl.appendChild(thEl);
 
   for(var i = 0; i < times.length; i++){
-    var thEl = document.createElement('th');
+    thEl = document.createElement('th');
     thEl.textContent = times[i];
     trEl.appendChild(thEl);
   };
 
+  thEl = document.createElement('th');
+  thEl.textContent = 'Daily Location Totals';
+  trEl.appendChild(thEl);
+
+  salesTable.appendChild(trEl);
+}
+
+function renderMyStores(){
+  var trEl = document.createElement('tr');
+
   var thEl = document.createElement('th');
+  thEl.textContent = 'location';
+  trEl.appendChild(thEl);
+
+  for(var i = 0; i < times.length; i++){
+    thEl = document.createElement('th');
+    thEl.textContent = times[i];
+    trEl.appendChild(thEl);
+  };
+
+  thEl = document.createElement('th');
   thEl.textContent = 'Daily Location Totals';
   trEl.appendChild(thEl);
 
@@ -80,6 +103,35 @@ function allCookies(){
   for(var i = 0; i < myStores.length; i++){
     myStores[i].render();
   }
+
 }
+
+function handleStoreSubmit(event) {
+  event.preventDefault();
+  if(!event.target.newLocation.value || !event.target.newMinCustomers.value || !event.target.newMaxCustomers.value || !event.target.newAvgCookiesPerSale.value) {
+    return alert('All fields for new store must be filled out');
+  }
+
+  var location = event.target.newLocation.value;
+  var minCustomers = event.target.newMinCustomers.value;
+  var maxCustomers = event.target.newMaxCustomers.value;
+  var avgCookiesPerSale = event.target.newAvgCookiesPerSale.value;
+
+  var newStore = new Store(location, minCustomers, maxCustomers, avgCookiesPerSale);
+
+  event.targt.newLocation.value=null;
+  event.targt.newMinCustomers.value=null;
+  event.targt.newMaxCustomers.value=null;
+  event.targt.newAvgCookiesPerSale.value=null;
+
+  myStores.push(newStore);
+  renderMyStores();
+};
+
 makeHeaderRow();
 allCookies();
+addStoreForm.addEventListener('submit', handleStoreSubmit);
+
+clearSalesForm.addEventListener('click', function()){
+  alert('You cleared the form')
+}

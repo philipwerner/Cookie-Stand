@@ -21,6 +21,7 @@ nav {
     position: static;
     font-weight: bolder;
     font-size: 20px;
+    display: block;
 
 }
 nav ul {
@@ -40,4 +41,16 @@ nav li a {
     height: 25px;
     padding: 12px 18px 8px 18px;
     border: 2px inset black;
+}
+form {
+  float: left;
+  margin-top: 50px;
+}
+.clearForm {
+  float: left;
+  margin-top: 10px;
+}
+table {
+  float: left;
+  margin-top: 50px;
 }
