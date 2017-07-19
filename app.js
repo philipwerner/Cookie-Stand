@@ -88,9 +88,12 @@ function allCookies(){
 
 function renderMyStores(){
   cookieShops.innerHTML = '';
-
   makeHeaderRow();
-  allCookies();
+  for(var i = 0; i < myStores.length; i++) {
+    myStores[i].render();
+  }
+  // makeHeaderRow();
+  // allCookies();
 };
 
 function handleStoreSubmit(event) {
@@ -112,12 +115,9 @@ function handleStoreSubmit(event) {
   event.target.newMaxCustomers.value = null;
   event.target.newAvgCookiesPerSale.value = null;
 
-  myStores.push(newStore);
 
-  // makeHeaderRow();
-  // allCookies();
-  // cookieShops.innerHTML = '';
-  renderMyStores();
+  myStores.push(newStore);
+  newStore.render();
 };
 
 makeHeaderRow();
