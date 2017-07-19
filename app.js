@@ -2,6 +2,7 @@
 
 var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var salesTable = document.getElementById('cookieShops');
+var myStores = [];
 
 function Store(location, minCustomers, maxCustomers, avgCookiesPerSale){
   this.location = location;
@@ -33,12 +34,12 @@ function Store(location, minCustomers, maxCustomers, avgCookiesPerSale){
     trEl.appendChild(tdEl);
 
     for(var i = 0; i < times.length; i++){
-      var tdEl = document.createElement('td');
+      tdEl = document.createElement('td');
       tdEl.textContent = this.cookiesSoldEachHour[i];
       trEl.appendChild(tdEl);
     }
 
-    var tdEl = document.createElement('td');
+    tdEl = document.createElement('td');
     tdEl.textContent = this.totalCookiesPerDay;
     trEl.appendChild(tdEl);
 
@@ -47,7 +48,6 @@ function Store(location, minCustomers, maxCustomers, avgCookiesPerSale){
     this.calcCookiesSoldEachHour();
   };
 
-var myStores = [];
 
 new Store('1st and Pike', 23, 65, 6.3);
 new Store('SeaTac', 3, 24, 1.2);
