@@ -1,6 +1,5 @@
 'use strict'
 
-// Random customer function
 var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var salesTable = document.getElementById('cookieShops');
 
@@ -45,7 +44,6 @@ function Store(location, minCustomers, maxCustomers, avgCookiesPerSale){
 
     salesTable.appendChild(trEl);
     }
-    // this.render(myStores);
     this.calcCookiesSoldEachHour();
   };
 
@@ -57,15 +55,6 @@ new Store('Seattle Center', 11, 38, 2.3);
 new Store('Capitol Hill', 20, 38, 2.3);
 new Store('Alki', 2, 16, 4.6);
 
-function storesInTheDOM(){
-  var storeList = document.getElementById('stores');
-  for(var i = 0; i < myStores.length; i++){
-    var liEl = document.createElement('li');
-    liEl.textContent = myStores[i].location;
-    storeList.appendChild(liEl);
-  }
-}
-// storesInTheDOM();
 
 function makeHeaderRow(){
   var trEl = document.createElement('tr');
