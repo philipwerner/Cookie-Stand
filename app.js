@@ -88,12 +88,13 @@ function allCookies(){
 
 function renderMyStores(){
   cookieShops.innerHTML = '';
-  for(var i = 0; i < myStores.length; i++) {
-    cookieShops.appendChild(myStores[i].render());
-  }
+
+  makeHeaderRow();
+  allCookies();
 };
 
 function handleStoreSubmit(event) {
+  console.log(event.target.newLocation.value);
   event.preventDefault();
   if(!event.target.newLocation.value || !event.target.newMinCustomers.value || !event.target.newMaxCustomers.value || !event.target.newAvgCookiesPerSale.value) {
     return alert('All fields for new store must be filled out');
@@ -106,12 +107,16 @@ function handleStoreSubmit(event) {
 
   var newStore = new Store(location, minCustomers, maxCustomers, avgCookiesPerSale);
 
-  // event.targt.newLocation.value = null;
-  // event.targt.newMinCustomers.value = null;
-  // event.targt.newMaxCustomers.value = null;
-  // event.targt.newAvgCookiesPerSale.value = null;
+  event.target.newLocation.value = null;
+  event.target.newMinCustomers.value = null;
+  event.target.newMaxCustomers.value = null;
+  event.target.newAvgCookiesPerSale.value = null;
 
   myStores.push(newStore);
+
+  // makeHeaderRow();
+  // allCookies();
+  // cookieShops.innerHTML = '';
   renderMyStores();
 };
 
@@ -120,5 +125,6 @@ allCookies();
 addStoreForm.addEventListener('submit', handleStoreSubmit);
 
 clearSalesForm.addEventListener('click', function(){
+
   alert('You cleared the form');
 });
