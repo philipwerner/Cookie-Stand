@@ -45,12 +45,26 @@ nav li a {
 form {
   float: left;
   margin-top: 50px;
+  border: 3px outset black;
 }
-.clearForm {
-  float: left;
-  margin-top: 10px;
+fieldset {
+  padding: 10px;
+  border: 1px inset grey;
+  background: #CCB2BF;
 }
 table {
   float: left;
-  margin-top: 50px;
+  margin-top: 5px;
+}
+h2 {
+  float: left;
+  color: white;
+  background: navy;
+  border: 10px solid black;
+  text-align: center;
+  width: 1000px;
+  height: auto;
+}
+input[type="text"] {
+  width: 75px;
 }
