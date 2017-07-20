@@ -40,25 +40,60 @@ nav li a:hover {
 	background-color: #fff;
 }
 /*Footer Styling*/
+footer {
+  color: #474447;
+  background-color: #f2f2f2;
+  height: 200px;
+}
+footer h3{
+  margin: 1px;
+  margin-top: 20px;
+}
+footer h4 {
+  margin-bottom: 1px;
+  font-size: 15px;
+}
 footer ul {
   display: inline;
+  margin: 1px;
 }
 footer li {
+  font-size: 12px;
   list-style: none;
 }
 .pikePlaceInfo {
+  height: 150px;
+  margin: 10px;
+  padding: 1px 10px;
+  border: 2px dotted grey;
   display: inline-block;
 }
 .seaTacInfo {
+  height: 150px;
+  padding: 1px 10px;
+  border: 2px dotted grey;
+  margin: 10px;
   display: inline-block;
 }
 .seattleCenterInfo {
+  height: 150px;
+  padding: 1px 10px;
+  border: 2px dotted grey;
+  margin: 10px;
   display: inline-block;
 }
 .capitolHillInfo {
+  height: 150px;
+  padding: 1px 10px;
+  border: 2px dotted grey;
+  margin: 10px;
   display: inline-block;
 }
 .alkiInfo {
+  height: 150px;
+  padding: 1px 10px;
+  border: 2px dotted grey;
+  margin: 10px;
   display: inline-block;
 }
 /*Table Styling*/
