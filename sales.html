@@ -14,9 +14,32 @@
         <li><a href="sales.html">Sales</a></li>
       </ul>
     </nav>
+
+<!-- Form build -->
+    <form id="addStoreForm">
+      <fieldset>
+        <legend>Add New Store To Sales Table</legend>
+
+        <label for="newLocation">New Location</label>
+        <input name="newLocation" type="text" />
+
+        <label for="newMinCustomers">Minimum Customers Each Hour</label>
+        <input name="newMinCustomers" type="text" />
+
+        <label for="newMaxCustomers">Maximum Customers Each Hour</label>
+        <input name="newMaxCustomers" type="text" />
+
+        <label for="newAvgCookiesPerSale">Average Cookies Per Sale</label>
+        <input name="newAvgCookiesPerSale" type="text" />
+
+        <button type="submit">Submit New Store</button>
+      </fieldset>
+    </form>
+
+    <!-- <button id="clearForm" class="clearForm">Clear Form</button> -->
     <ol id='stores'></ol>
 
-    <h2>Cookies Needed Each Day By Location</h2>
+    <h2 id="cookieTable">Cookies Needed Each Day By Location</h2>
     <table id="cookieShops"></table>
 
     <script src="app.js"></script>

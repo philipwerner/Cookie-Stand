@@ -21,6 +21,7 @@ nav {
     position: static;
     font-weight: bolder;
     font-size: 20px;
+    display: block;
 
 }
 nav ul {
@@ -39,5 +40,31 @@ nav li a {
     display: block;
     height: 25px;
     padding: 12px 18px 8px 18px;
-    border: 2px inset yellow;
+    border: 2px inset black;
+}
+form {
+  float: left;
+  margin-top: 50px;
+  border: 3px outset black;
+}
+fieldset {
+  padding: 10px;
+  border: 1px inset grey;
+  background: #CCB2BF;
+}
+table {
+  float: left;
+  margin-top: 5px;
+}
+h2 {
+  float: left;
+  color: white;
+  background: navy;
+  border: 10px solid black;
+  text-align: center;
+  width: 1000px;
+  height: auto;
+}
+input[type="text"] {
+  width: 75px;
 }
