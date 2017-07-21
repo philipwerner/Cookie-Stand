@@ -141,7 +141,8 @@ th {
   background: #CCB2BF;
 }
 .newOrderForm {
-  height: 600px;
+  border: 1px solid black;
+  height: auto;
 }
 .orderFieldSet {
   height: 600px;
