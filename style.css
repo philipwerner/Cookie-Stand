@@ -18,7 +18,7 @@ nav {
 nav ul {
 	list-style: none;
 	width: 800px;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	padding: 0;
 }
 nav li {
@@ -29,7 +29,7 @@ nav li a {
 	padding: 8px 15px;
 	text-decoration: none;
 	font-weight: bold;
-	color: #069;
+	color: #474447;
 	border-right: 1px solid #ccc;
 }
 nav li:first-child a {
@@ -38,6 +38,13 @@ nav li:first-child a {
 nav li a:hover {
 	color: #c00;
 	background-color: #fff;
+}
+p {
+  display: block;
+  padding: 10px;
+  margin: 3px;
+  width: 300px;
+  border: 2px solid grey;
 }
 /*Footer Styling*/
 footer {
@@ -50,6 +57,7 @@ footer h3{
   margin-top: 20px;
 }
 footer h4 {
+  text-decoration: underline;
   margin-bottom: 1px;
   font-size: 15px;
 }
@@ -140,4 +148,10 @@ form {
   width: 800px;
   height: auto;
   margin-right: 50px;
+}
+/*Index Styling*/
+.indexH2 {
+  margin-bottom: 2px;
+  text-decoration: underline;
+  padding: 10px;
 }
