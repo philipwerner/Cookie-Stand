@@ -39,7 +39,6 @@ var Store = function(location, minCustomers, maxCustomers, avgCookiesPerSale){
 };
 
 Store.prototype.render = function(){
-  cookieShops.innerHTML = '';
   var trEl = document.createElement('tr');
 
   var tdEl = document.createElement('td');
@@ -141,7 +140,7 @@ function handleStoreSubmit(event) {
 
   makeHeaderRow();
   myStores.push(newStore);
-  // newStore.render();
+  newStore.render();
   allCookies();
   makeFooterRow();
 };
