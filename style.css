@@ -123,22 +123,31 @@ th {
 	background-color: navy;
 	color: white;
 }
-fieldset {
-  padding: 10px;
-  border: 1px inset grey;
-  background: #CCB2BF;
-}
 /*Form Styling*/
-input[type="text"] {
+.newStoreForm input[type="text"] {
   width: 75px;
 }
-form {
+.newStoreForm {
   /*float: left;*/
   margin-top: 50px;
   border: 3px outset black;
   /*width: 375px;*/
   height: auto;
   display: inline-table;
+}
+.storeFieldset {
+  padding: 10px;
+  border: 1px inset grey;
+  background: #CCB2BF;
+}
+.newOrderForm {
+  height: 600px;
+}
+.orderFieldSet {
+  height: 600px;
+}
+.newOrderForm input[type="text"] {
+  width: 125px;
 }
 /*Sales Page Styling*/
 .salesH2 {
