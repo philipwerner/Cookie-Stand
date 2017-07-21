@@ -39,6 +39,7 @@ var Store = function(location, minCustomers, maxCustomers, avgCookiesPerSale){
 };
 
 Store.prototype.render = function(){
+  cookieShops.innerHTML = '';
   var trEl = document.createElement('tr');
 
   var tdEl = document.createElement('td');
@@ -116,6 +117,7 @@ function allCookies(){
 function handleStoreSubmit(event) {
   console.log(event.target.newLocation.value);
   event.preventDefault();
+  cookieShops.innerHTML = '';
   // for(var i = 0; i < myStores.length; i++){
   //   if(event.target.newLocation.value === myStores[i].location){
   //
@@ -137,9 +139,11 @@ function handleStoreSubmit(event) {
   event.target.newMaxCustomers.value = null;
   event.target.newAvgCookiesPerSale.value = null;
 
-
+  makeHeaderRow();
   myStores.push(newStore);
-  newStore.render();
+  // newStore.render();
+  allCookies();
+  makeFooterRow();
 };
 
 makeHeaderRow();
