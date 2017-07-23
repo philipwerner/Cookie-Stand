@@ -46,6 +46,77 @@ p {
   width: 300px;
   border: 2px solid grey;
 }
+/*Index Styling*/
+.indexH2 {
+  width: 100px
+  margin-bottom: 2px;
+  text-decoration: underline;
+  padding: 10px;
+}
+.comingSoon {
+  margin-bottom: 2px;
+  text-decoration: underline;
+  padding: 10px;
+}
+.firstArticle {
+  float: left;
+  border: 1px dotted black;
+  display: inline-block;
+  margin-top: 30px;
+}
+.secondArticle {
+  float: right;
+  border: 1px dotted black;
+  display: inline-block;
+  margin-top: 30px;
+}
+.updates {
+  margin-bottom: 50px;
+  /*border: 1px solid black;*/
+}
+hr {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.featured {
+  /*display: inline;*/
+  position: relative;
+  height: 500px;
+  margin-top: 75px;
+  /*border: 1px solid black;*/
+}
+.shirt {
+  border: 1px solid black;
+  padding: 10px;
+  float: left;
+  display: inline;
+  margin-top: 30px;
+  margin: 0 auto;
+}
+.new_release {
+  border: 1px dotted black;
+  display: inline-block;
+  margin-left: 140px;
+  padding: 10px;
+}
+.new_release h2 {
+  margin-bottom: 2px;
+  text-decoration: underline;
+  padding: 10px;
+}
+.new_release p {
+  padding: 10px;
+  position: relative;
+  margin: 0 auto;
+  margin left: 25px;
+}
+.cutter {
+  border: 1px solid black;
+  padding: 10px;
+  display: inline;
+  float: right;
+  margin-right: 30px;
+}
 /*Footer Styling*/
 footer {
   color: #474447;
@@ -106,6 +177,11 @@ footer li {
   margin: 10px;
   display: inline-block;
 }
+footer img {
+  float: right;
+  margin: 0 65px;
+  margin-top: 15px;
+}
 /*Table Styling*/
 table {
 	border: 10px solid black;
@@ -160,30 +236,6 @@ th {
   width: 800px;
   height: auto;
   margin-right: 50px;
-}
-/*Index Styling*/
-.indexH2 {
-  width: 100px
-  margin-bottom: 2px;
-  text-decoration: underline;
-  padding: 10px;
-}
-.comingSoon {
-  margin-bottom: 2px;
-  text-decoration: underline;
-  padding: 10px;
-}
-.firstArticle {
-  float: left;
-  border: 1px dotted black;
-  display: inline-block;
-  margin-top: 30px;
-}
-.secondArticle {
-  float: right;
-  border: 1px dotted black;
-  display: inline-block;
-  margin-top: 30px;
 }
 /*Image Styling*/
 .articlePic {
