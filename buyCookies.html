@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Salmon Cookies</title>
+    <title>Buy Salmon Cookies!!!</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
   </head>
   <body>
-    <h1>Salmon Cookie Sales</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -16,39 +15,44 @@
         <li><a href="locations.html">Locations</a></li>
         <li><a href="aboutus.html">About Us</a><li>
       </ul>
+      <p>Come See us at Salmon Days<p>
+      <a href="https://www.salmondays.org/"><img class="small_fish" src="small_fish.jpg"></a>
     </nav>
+    <img src="C:\Users\Philip\codefellows\201\Cookie-Stand\PatsSalmon.png" class="hero"/>
+    <h1>Online Purchasing Coming Soon!!!</h1>
 
-<!-- Form build -->
-    <form id="addStoreForm" class="newStoreForm">
-      <fieldset class="storeFieldset">
-        <legend>Add New Store To Sales Table</legend>
+    <!-- Order Form Build -->
+    <form id="newOrderForm">
+      <fieldset class="orderFieldset">
+        <legend>Order Your Delicious Cookies Here!</legend>
 
-        <label for="newLocation">New Location</label>
-        <input name="newLocation" type="text" />
+        <label for="firstName">First Name</label>
+        <input name="firstName" type="text" />
 
-        <label for="newMinCustomers">Minimum Customers Each Hour</label>
-        <input name="newMinCustomers" type="text" />
+        <label for="lastName">Last Name</label>
+        <input name="lastName" type="text" />
 
-        <label for="newMaxCustomers">Maximum Customers Each Hour</label>
-        <input name="newMaxCustomers" type="text" />
+        <label for="address">Address</label>
+        <input name="address" type="text" />
 
-        <label for="newAvgCookiesPerSale">Average Cookies Per Sale</label>
-        <input name="newAvgCookiesPerSale" type="text" />
+        <label for="city">City</label>
+        <input name="city" type="text" />
 
-        <button type="submit">Submit New Store</button>
+        <label for="state">State</label>
+        <input name="state" type="text" />
+
+        <label for="zipCode">Zip Code</label>
+        <input name="zipCode" type="text" />
+
+        <label for="qty">Quantity</label>
+        <input name="qty" type="text" />
+
+        <button type="submit">Submit Order</button>
       </fieldset>
     </form>
 
-    <!-- <button id="clearForm" class="clearForm">Clear Form</button> -->
-    <ol id='stores'></ol>
-
-    <h2 id="cookieTable" class="salesH2">Cookies Needed Each Day By Location</h2>
-    <table id="cookieShops"></table>
-
-    <script src="app.js"></script>
-
-    <footer>
-      <h3>Locations</h3>
+  <footer>
+    <h3>Locations</h3>
       <section class="pikePlaceInfo">
         <h4>Pike Place Market</h4>
           <ul>
@@ -104,5 +108,6 @@
           </ul>
       </section>
     </footer>
+    <script src="order.js"></script>
   </body>
 </html>

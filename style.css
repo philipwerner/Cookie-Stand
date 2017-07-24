@@ -1,70 +1,287 @@
+/*All Page Styling*/
 * {
   font-family: 'Baloo', cursive;
 }
-
+h1 {
+  background-color: #f2f2f2;
+  margin: 0px;
+  padding-left: 8px 15px;
+}
+nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 1em 0;
+	padding: 0;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+}
+nav ul {
+	list-style: none;
+	width: 800px;
+	/*margin: 0 auto;*/
+	padding: 0;
+}
+nav li {
+	float: left;
+}
+nav li a {
+	display: inline-block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #474447;
+	border-right: 1px solid #ccc;
+}
+nav li:first-child a {
+	border-left: 1px solid #ccc;
+}
+nav li a:hover {
+	color: #c00;
+	background-color: #fff;
+}
+p {
+  display: inline-block;
+  padding: 10px;
+  margin: 3px;
+  width: 300px;
+  border: 2px solid grey;
+}
+.small_fish {
+  float: right;
+  /*margin: 0 auto;*/
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+nav p {
+  float: right;
+  margin: auto 0;
+  width: auto;
+  border: none;
+}
+/*Index Styling*/
+.indexH2 {
+  width: 100px
+  margin-bottom: 2px;
+  text-decoration: underline;
+  padding: 10px;
+}
+.comingSoon {
+  margin-bottom: 2px;
+  text-decoration: underline;
+  padding: 10px;
+}
+.firstArticle {
+  float: left;
+  border: 1px dotted black;
+  display: inline-block;
+  margin-top: 30px;
+}
+.secondArticle {
+  float: right;
+  border: 1px dotted black;
+  display: inline-block;
+  margin-top: 30px;
+}
+.updates {
+  margin-bottom: 100px;
+  /*border: 1px solid black;*/
+}
+.image_break {
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
+  /*border: 1px solid black;*/
+  margin-bottom: 50px;
+}
+/*.fish_left {
+  display: inline;
+  float: left;
+  margin-left: 250px;
+}
+hr {
+  display: inline;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 100px;
+}
+.fish_right {
+  display: inline;
+  float: right;
+  margin-right: 250px;
+}*/
+.featured {
+  display: inline;
+  position: relative;
+  height: 500px;
+  margin-top: 100px;
+  /*border: 1px solid black;*/
+}
+.shirt {
+  border: 1px solid black;
+  padding: 10px;
+  float: left;
+  display: inline;
+  margin-top: 30px;
+  margin: 0 auto;
+}
+.new_release {
+  border: 1px dotted black;
+  display: inline-block;
+  margin-left: 140px;
+  padding: 10px;
+}
+.new_release h2 {
+  margin-bottom: 2px;
+  text-decoration: underline;
+  padding: 10px;
+}
+.new_release p {
+  padding: 10px;
+  position: relative;
+  margin: 0 auto;
+  margin left: 25px;
+}
+.cutter {
+  border: 1px solid black;
+  padding: 10px;
+  display: inline;
+  float: right;
+  margin-right: 30px;
+}
+/*Footer Styling*/
+footer {
+  color: #474447;
+  background-color: #f2f2f2;
+  height: 250px;
+  width: 100%;
+  margin-top: 75px;
+}
+footer h3{
+  margin: 1px;
+  margin-top: 20px;
+}
+footer h4 {
+  text-decoration: underline;
+  margin-bottom: 1px;
+  font-size: 15px;
+}
+footer ul {
+  display: inline;
+  margin: 1px;
+}
+footer li {
+  font-size: 12px;
+  list-style: none;
+}
+.pikePlaceInfo {
+  height: 175px;
+  margin: 10px;
+  padding: 1px 10px;
+  border: 2px dotted grey;
+  display: inline-block;
+}
+.seaTacInfo {
+  height: 175px;
+  padding: 1px 10px;
+  border: 2px dotted grey;
+  margin: 10px;
+  display: inline-block;
+}
+.seattleCenterInfo {
+  height: 175px;
+  padding: 1px 10px;
+  border: 2px dotted grey;
+  margin: 10px;
+  display: inline-block;
+}
+.capitolHillInfo {
+  height: 175px;
+  padding: 1px 10px;
+  border: 2px dotted grey;
+  margin: 10px;
+  display: inline-block;
+}
+.alkiInfo {
+  height: 175px;
+  padding: 1px 10px;
+  border: 2px dotted grey;
+  margin: 10px;
+  display: inline-block;
+}
+footer img {
+  float: right;
+  margin: 0 65px;
+  margin-top: 15px;
+}
+/*Table Styling*/
 table {
 	border: 10px solid black;
+  float: inherit;
+  margin-top: 5px;
+  margin-right: 50px;
+  width: 800px;
 }
-
 td {
 	padding: 10px;
   border: 1px solid black;
   background-color: #CCB2BF;
 }
-
 th {
 	background-color: navy;
 	color: white;
 }
-nav {
-    float: left;
-    position: static;
-    font-weight: bolder;
-    font-size: 20px;
-    display: block;
-
+/*Form Styling*/
+.newStoreForm input[type="text"] {
+  width: 75px;
 }
-nav ul {
-    padding: ;
-    float: left;
-    border-bottom: ;
-    list-style-type: none;
-    width: 800px;
-    margin: auto;
-
-}
-nav li {
-    float: left;
-}
-nav li a {
-    display: block;
-    height: 25px;
-    padding: 12px 18px 8px 18px;
-    border: 2px inset black;
-}
-form {
-  float: left;
+.newStoreForm {
+  /*float: left;*/
   margin-top: 50px;
   border: 3px outset black;
+  /*width: 375px;*/
+  height: auto;
+  display: inline-table;
 }
-fieldset {
+.storeFieldset {
   padding: 10px;
   border: 1px inset grey;
   background: #CCB2BF;
 }
-table {
-  float: left;
-  margin-top: 5px;
+.newOrderForm {
+  border: 1px solid black;
+  height: auto;
 }
-h2 {
+.orderFieldSet {
+  height: 600px;
+}
+.newOrderForm input[type="text"] {
+  width: 125px;
+}
+/*Sales Page Styling*/
+.salesH2 {
   float: left;
   color: white;
   background: navy;
   border: 10px solid black;
   text-align: center;
-  width: 1000px;
+  width: 800px;
   height: auto;
+  margin-right: 50px;
 }
-input[type="text"] {
-  width: 75px;
+/*Image Styling*/
+.articlePic {
+  border: 1px solid black;
+  padding: 10px;
+  display: inline-block;
+  height: 275px;
+  width: auto;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.hero{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
