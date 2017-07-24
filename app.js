@@ -87,25 +87,25 @@ function makeHeaderRow(){
   salesTable.appendChild(trEl);
 }
 
-function makeFooterRow(){
-  var trEl = document.createElement('tr');
-
-  var thEl = document.createElement('th');
-  thEl.textContent = 'Hourly Totals';
-  trEl.appendChild(thEl);
-
-  for(var i = 0; i < times.length; i++){
-    thEl = document.createElement('th');
-    thEl.textContent = 0;
-    trEl.appendChild(thEl);
-  };
-
-  thEl = document.createElement('th');
-  thEl.textContent = 0;
-  trEl.appendChild(thEl);
-
-  salesTable.appendChild(trEl);
-}
+// function makeFooterRow(){
+//   var trEl = document.createElement('tr');
+//
+//   var thEl = document.createElement('th');
+//   thEl.textContent = 'Hourly Totals';
+//   trEl.appendChild(thEl);
+//
+//   for(var i = 0; i < times.length; i++){
+//     thEl = document.createElement('th');
+//     thEl.textContent = 0;
+//     trEl.appendChild(thEl);
+//   };
+//
+//   thEl = document.createElement('th');
+//   thEl.textContent = 0;
+//   trEl.appendChild(thEl);
+//
+//   salesTable.appendChild(trEl);
+// }
 
 function allCookies(){
   for(var i = 0; i < myStores.length; i++){
@@ -116,12 +116,7 @@ function allCookies(){
 function handleStoreSubmit(event) {
   console.log(event.target.newLocation.value);
   event.preventDefault();
-  cookieShops.innerHTML = '';
-  // for(var i = 0; i < myStores.length; i++){
-  //   if(event.target.newLocation.value === myStores[i].location){
-  //
-  //   }
-  // }
+
   if(!event.target.newLocation.value || !event.target.newMinCustomers.value || !event.target.newMaxCustomers.value || !event.target.newAvgCookiesPerSale.value) {
     return alert('All fields for new store must be filled out');
   }
@@ -138,14 +133,11 @@ function handleStoreSubmit(event) {
   event.target.newMaxCustomers.value = null;
   event.target.newAvgCookiesPerSale.value = null;
 
-  makeHeaderRow();
   myStores.push(newStore);
   newStore.render();
   allCookies();
-  makeFooterRow();
 };
 
 makeHeaderRow();
 allCookies();
-makeFooterRow();
 addStoreForm.addEventListener('submit', handleStoreSubmit);
