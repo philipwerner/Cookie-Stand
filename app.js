@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var salesTable = document.getElementById('cookieShops');
@@ -11,12 +11,12 @@ function Store(location, minCustomers, maxCustomers, avgCookiesPerSale){
   this.customersPerHour = [];
   this.calcCustomersPerHour = function(){
     for(var i = 0; i < times.length; i++){
-      this.customersPerHour.push(Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers)
+      this.customersPerHour.push(Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers);
     }
   };
   this.cookiesSoldEachHour = [];
   this.calcCookiesSoldEachHour = function(){
-  this.calcCustomersPerHour();
+    this.calcCustomersPerHour();
     for(var i = 0; i < times.length; i++){
       this.cookiesSoldEachHour.push(Math.ceil(this.customersPerHour[i] * this.avgCookiesPerSale));
       this.totalCookiesPerDay += this.cookiesSoldEachHour[i];
@@ -25,7 +25,7 @@ function Store(location, minCustomers, maxCustomers, avgCookiesPerSale){
   this.totalCookiesPerDay = 0;
   myStores.push(this);
 
-    this.render = function(){
+  this.render = function(){
     var trEl = document.createElement('tr');
 
     var tdEl = document.createElement('td');
@@ -33,19 +33,19 @@ function Store(location, minCustomers, maxCustomers, avgCookiesPerSale){
     trEl.appendChild(tdEl);
 
     for(var i = 0; i < times.length; i++){
-      var tdEl = document.createElement('td');
+      tdEl = document.createElement('td');
       tdEl.textContent = this.cookiesSoldEachHour[i];
       trEl.appendChild(tdEl);
     }
 
-    var tdEl = document.createElement('td');
+    tdEl = document.createElement('td');
     tdEl.textContent = this.totalCookiesPerDay;
     trEl.appendChild(tdEl);
 
     salesTable.appendChild(trEl);
-    }
-    this.calcCookiesSoldEachHour();
   };
+  this.calcCookiesSoldEachHour();
+};
 
 var myStores = [];
 
@@ -64,12 +64,12 @@ function makeHeaderRow(){
   trEl.appendChild(thEl);
 
   for(var i = 0; i < times.length; i++){
-    var thEl = document.createElement('th');
+    thEl = document.createElement('th');
     thEl.textContent = times[i];
     trEl.appendChild(thEl);
   };
 
-  var thEl = document.createElement('th');
+  thEl = document.createElement('th');
   thEl.textContent = 'Daily Location Totals';
   trEl.appendChild(thEl);
 
