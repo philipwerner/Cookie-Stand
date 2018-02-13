@@ -2,6 +2,16 @@
   font-family: 'Baloo', cursive;
 }
 
+section {
+  display: block;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  width: 500px;
+}
+
 table {
 	border: 10px solid black;
 }
@@ -21,6 +31,7 @@ nav {
     position: static;
     font-weight: bolder;
     font-size: 20px;
+    margin-bottom: 30px;
 
 }
 nav ul {
@@ -40,4 +51,6 @@ nav li a {
     height: 25px;
     padding: 12px 18px 8px 18px;
     border: 2px inset yellow;
+    color: white;
+    background: navy;
 }
